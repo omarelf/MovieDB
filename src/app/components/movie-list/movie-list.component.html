@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <app-filter (filter)="onFilter($event)" (viewFavoritesEvent)="viewFavorites()"></app-filter>
+  <div class="row mt-4">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let movie of filteredMovies">
+      <div class="card h-100 shadow-sm">
+        <img class="card-img-top" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" [alt]="movie.title">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <p class="card-text">{{ movie.overview | slice:0:100 }}...</p>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-outline-secondary" (click)="toggleLike(movie)">
+            {{ isLiked(movie) ? 'Unlike' : 'Like' }}
+          </button>
+          <a [routerLink]="['/movies', movie.id]" class="btn btn-primary ml-2">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

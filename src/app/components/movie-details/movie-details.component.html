@@ -1,0 +1,19 @@
+<div *ngIf="movie" class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="img-fluid rounded shadow-sm" [alt]="movie.title">
+    </div>
+    <div class="col-md-8">
+      <h2>{{ movie.title }}</h2>
+      <p>{{ movie.overview }}</p>
+      <div class="d-flex">
+        <button (click)="toggleLike()" class="btn btn-primary">
+          {{ isLiked ? 'Unlike' : 'Like' }}
+        </button>
+        <button (click)="toggleFavorite()" class="btn btn-secondary ml-2">
+          {{ isFavorite ? 'Unfavorite' : 'Add to Favorites' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

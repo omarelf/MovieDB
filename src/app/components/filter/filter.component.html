@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <div class="form-inline row justify-content-center">
+    <div class="col-md-3 mb-2">
+      <div class="input-group">
+        <input class="form-control" type="text" placeholder="Search for movies..." [(ngModel)]="searchQuery">
+        <div class="input-group-append">
+          <button class="btn btn-outline-primary" type="button" (click)="onSearch()">Search</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 mb-2">
+      <select class="form-control" [(ngModel)]="category">
+        <option value="">All Categories</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+      </select>
+    </div>
+    <div class="col-md-2 mb-2">
+      <input class="form-control" type="number" [(ngModel)]="year" placeholder="Year">
+    </div>
+    <div class="col-md-2 mb-2">
+      <button class="btn btn-outline-primary w-100" type="button" (click)="onFilter()">Filter</button>
+    </div>
+    <div class="col-md-2 mb-2">
+      <button class="btn btn-outline-secondary w-100" type="button" (click)="viewFavorites()">Favorites</button>
+    </div>
+  </div>
+</div>

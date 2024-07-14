@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  .card-body {
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .card-footer {
+    background-color: transparent;
+    border-top: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .input-group-append {
+    margin-left: -1px; 
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem !important;
+  }
+  
